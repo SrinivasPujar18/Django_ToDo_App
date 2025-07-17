@@ -115,5 +115,55 @@
 #In "todo/views.py" edited code of 'addTask' func, then it adds task in homePage according to the user by clicking button on server.
 #we can alter the added task in server by edit code in "toDo_main/views.py" in(5)--> ('home' func).       (order_by('updated_at')) shows task in ascending (order_by('-updated_at')) show task in descending.
 
-#16) we have store these updated codes to GitHub
-#In terminal "git status" it shows the updated or modified 
+
+#16) we have to store these updated codes to GitHub
+#In terminal "git status" it shows the updated or modified codes,
+#then "git add -A" to add 
+#then "git commit -m "add task functionality" " to commit to GitHub
+#then "git push origin main" to push all codes.
+
+
+#17) Completed_tasks
+#here we have to move that added task to completed_task by clicking button of 'MarkAsDone' in server.
+#In "todo_main/views.py" edit code (6), this make changes, and also edit code in 'home.html' (5) (in completed_tasks)
+
+
+#18) MarkAsDone Button
+#By clicking 'MarkAsDone' button to show in completed_tasks,
+#In 'home.html' to know the all primary key of tasks, code is
+#line:41    My Day...       {{task.task}} - pk = {{task.pk}}           <!--(2)... task from "todo/models.py" -->
+#in "todo/urls.py" edit code (2)(urlpatterns   path), Then create mark_as_done func (3) in "todo/views.py", 
+#Then in 'home.html' edit code (6), changed 'button' to '<a>' anchor tag with href="url" and removing 'button'.
+#Then "todo/views.py" edit code (4), changed func 'mark_as_done'.
+#And you can also change in 'home.html' button delete(🗑) and edit(✏️).
+
+
+#19) Mark As Undone
+#In 'home.html' edit code (7) that shows 
+# note: 1) In anchor tag define "class="btn btn-warning" it displays -> Yellow color
+#       1) In anchor tag define "class="btn btn-success" it displays -> Green color
+#       1) In anchor tag define "class="btn btn-primary" it displays -> Blue color
+#       1) In anchor tag define "class="btn btn-danger" it displays -> Red color
+#After change in 'home.html', make edit in "todo/urls.py" (3), and after edit in "todo/views.py" (5).
+#And after that edit in 'home.html' (8), to make 'completed_task' to 'My_Day' in server web_page.
+
+#20) Edit task url pattern
+#In "todo/urls.py" edit code (4), and edit in "todo/views.py" (6), 
+# After that create a new html file in Templates/ "edit_task.html", after that in 'home.html' edit code (9)
+#edit code in (1) "edit_task.html", and after edit code in "todo/urls.py" (4), and edit code in "todo/views.py" (6),
+#after that edit code in "edit_task.html" (2). After that you have to do access the POST request...
+#For accessing POST request (for making, click the "+update" button in 'Django-edit_task_page' server page, it access POST request), 
+#in "edit_task.html" edit code (3) (added url in <form action="">), and edit code in (7) "todo/views.py", and it works properly.
+
+
+
+#21) delete task button
+#edit code in "todo/urls.py" (5), and edit code in "todo/views.py" (8), and after edit code in (10) "home.html".
+#so, it completed we can do CRUD operation in it. And ToDo App is works completely according to user.
+
+
+#22) push this modified and updated code to "GitHub"
+#In terminal "git status" it shows the updated or modified codes,
+#then "git add -A" to add 
+#then "git commit -m "add task functionality" " to commit to GitHub
+#then "git push origin main" to push all codes.

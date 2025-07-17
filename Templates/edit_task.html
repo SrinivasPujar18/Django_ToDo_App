@@ -1,0 +1,44 @@
+<!--(1)... code by meeeeeee-->
+<!--(1)... create a boiler plate code by (shift+!)-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Django-edit_task_page</title>
+        <!--(1)... copy paste the bootstrap link from 'home.html' file-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <style>
+            body {
+                background-color: #f8f9fa;
+            }
+            .task-box {
+                padding: 15px;
+                background-color: white;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            .completed-section {
+                background-color: #f1f1f1;
+                padding: 15px;
+                border-radius: 5px;
+                min-height: 150px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--(1)... create a div -->
+        <div class="container mt-4">
+            <h2 class="text-center">Django-edit_task_page</h2>
+            <!--(1)... this <form> is also copied from 'home.html' file line:54-->
+            <form action="{% url 'edit_task' get_task.pk %}" method="post" style="width: 500px; margin: auto;">   <!--(1)... added action with url-->  <!--(1)... 'style' for aligning center the update button-->  <!--(3)...add url in <form> action-->
+                    {% csrf_token %} <!--(1)... when you create form with method 'POST' you have to use {% csrf_token %} -->
+                    <div class="input-group mt-4">
+                        <input type="text" name="task" class="form-control" name="task" placeholder="Add a task" value="{{get_task.task}}">   <!--(2)... added "value" to input-->
+                        <button type=submit class="btn btn-primary">+Update</button>
+                    </div>
+            </form>
+        </div>
+    </body>
+</html>
