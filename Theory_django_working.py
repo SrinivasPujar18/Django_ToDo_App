@@ -165,5 +165,5 @@
 #22) push this modified and updated code to "GitHub"
 #In terminal "git status" it shows the updated or modified codes,
 #then "git add -A" to add 
-#then "git commit -m "add task functionality" " to commit to GitHub
+#then "git commit -m "ToDo App Final" " to commit to GitHub
 #then "git push origin main" to push all codes.
