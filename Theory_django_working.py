@@ -66,12 +66,12 @@
 # git add README.md
 # git commit -m "first commit"
 # git branch -M main
-# git remote add origin https://github.com/SrinivasPujar18/Django_toDo_.git
+# git remote add origin https://github.com/SrinivasPujar18/Django_ToDo_App.git
 # git push -u origin main
 
 
 # …or push an existing repository from the command line
-# git remote add origin https://github.com/SrinivasPujar18/Django_toDo_.git
+# git remote add origin https://github.com/SrinivasPujar18/Django_ToDo_App.git
 # git branch -M main
 # git push -u origin main
 
